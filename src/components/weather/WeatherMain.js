@@ -9,8 +9,6 @@ const WeatherMain = () => {
 const [city, updateCity] = useState(null);   
 const [weather,updateWeather] = useState();
 
-/* for instant search without on submit */
-const [search,setSearch] = useState('Delhi');
 
 /* for instant search with on submit */
 const fetchWeather = async (e) => {
@@ -19,21 +17,6 @@ const fetchWeather = async (e) => {
     updateWeather(response.data);
     //console.log(response.data)
 }
-
-/* for instant search without on submit */
-
-useEffect( () => {
-    const fetchApi = async () => {
-        
-        const url = `https://api.openweathermap.org/data/2.5/weather?q=${search}&appid=fec40eb498208bde1cbf13a788a62e34`;
-        const res = await fetch(url);
-        const resJson = await res.json();
-        console.log(resJson);
-        updateCity(resJson);
-    };
-    fetchApi();
-},[setSearch])
-
 
 
   return (
