@@ -33,7 +33,6 @@ const fetchWeather = async (e) => {
             :
             <>
                 <WeatherSearch updateCity={updateCity} fetchWeather={fetchWeather}  />
-                <p className='no-result'>No result found...</p>
             </>
             } 
     </div>

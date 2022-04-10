@@ -1,5 +1,5 @@
 
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+@import url('https://fonts.googleapis.com/css2?family=Dangrek&display=swap');
 @import url(https://cdnjs.cloudflare.com/ajax/libs/weather-icons/1.2/css/weather-icons.min.css);
 
 *{box-sizing: border-box; -webkit-box-sizing:border-box}
@@ -56,6 +56,16 @@ body{
 
 #root{
   background-color: #126E7A;
+  font-family: 'Dangrek', cursive;
+}
+
+.logo {
+  font-size: 72px;
+  text-align: center;
+  font-weight: bold;
+  color: #ffff;
+  text-shadow: 2px 3px 2px #00d3eb;
+  margin: 0 0 35px;
 }
 
 .main {
@@ -64,9 +74,10 @@ body{
   .container{
     width: 100%;
     height: 100vh;
-    background: #126e7a;
+    // background: #126e7a;
     box-shadow: inset 0vw 0vw 8vw 2vw #092c30;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     padding: 0 30px;
   }

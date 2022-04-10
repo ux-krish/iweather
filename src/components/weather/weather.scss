@@ -8,19 +8,23 @@
         align-items: center;
         justify-content: center;
         border-radius: 50px;
-        box-shadow: 0px 0px 0 6px #005862;
-        border: 1px solid #0b363b;
+        box-shadow: 0px 0px 0 6px rgba(255, 255, 255, 0.24);
         input{
-            font-size: 16px;
-            border: 1px solid #0b363b;
+            font-size: 20px;
+            border: 1px solid #00d3eb;
             border-top-left-radius: 50px;
             border-bottom-left-radius: 50px;
             outline: 0;
             padding: 0 19px;
-            height: 40px;
-            line-height: 40px;
+            height: 50px;
+            line-height: 50px;
             width: 70%;
-            
+            font-family: 'Dangrek', cursive;
+            color: #00d3eb;
+            text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.61);
+            &::placeholder{
+                color: #00d3eb;
+            }
         }
         button{
             width: 30%;
@@ -30,11 +34,13 @@
             padding: 0 10px;
             border-top-right-radius: 50px;
             border-bottom-right-radius: 50px;
-            background: #0b363b;
+            background: #00d3eb;
             color: #fff;
-            font-size: 16px;
-            height: 40px;
-            line-height: 40px;
+            font-size: 21px;
+            height: 50px;
+            line-height: 50px;
+            font-family: 'Dangrek', cursive;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.52);
         }
     }
     .no-result{
@@ -47,32 +53,35 @@
 
 
 .weahter_info{
-    font-family: Arial, Helvetica, sans-serif;
+    // font-family: Arial, Helvetica, sans-serif;
     color: #fff;
-    border: 1px solid #0b363b;
-    border-radius: 15px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
     padding: 20px;
     margin-top: 30px;
-    background: rgba(255, 255, 255, 0.11);
-    box-shadow: inset 0 0 10px 3px #0b363b, 0 30px 20px -15px #0b363b;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     align-items: center;
     text-align: center;
-    
+    background: rgba(255, 255, 255, 0.24);
+    box-shadow: 0px 3px 17px -7px #000;
     > div{
         margin: 10px auto;
-        border: 1px solid #0b363b;
-        padding: 10px;
-        width: 90%;
-        font-size: 12px;
-        height: 100px;
-        align-items: center;
-        justify-content: center;
-        display: flex;
-        border-radius: 10px;
-        box-shadow: inset 0 0 11px 3px #0b363b;
-        background: rgba(0, 0, 0, 0.32);
+    border: 0px solid #00d3eb;
+    padding: 10px;
+    width: 90%;
+    font-size: 12px;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 31px;
+    background: rgba(0, 0, 0, 0.28);
+    color: #00d3eb;
+    box-shadow: -3px 5px 10px -4px #000;
+    text-shadow: -1px 1px 2px rgba(0, 0, 0, 0.42);
     }
     .city_temp {
         flex-direction: column;
@@ -82,12 +91,12 @@
             max-width: 50px;
             margin: 0;
             display: block;
-            filter: invert(1);
+            filter: drop-shadow(1px 2px 0px #00d3eb);
         }
         span{
             padding: 0 0;
             font-size: 24px;
-            word-spacing: -7px;
+            word-spacing: -5px;
             line-height: 24px;
             display: block;
             margin: 0 0 10px;
@@ -102,7 +111,7 @@
             margin: 4px 0;
             font-size: 24px;
             letter-spacing: 0px;
-            word-spacing: -7px;
+            word-spacing: -5px;
             &:first-child{
                 font-size: 14px!important;
             }
@@ -112,4 +121,21 @@
         }
         
     } 
+    .city_humidity{
+        span{
+            display: block;
+            margin-top: 10px;
+            font-size: 24px;
+        }
+    }
+    .city_pressure{
+        span{
+            display: block;
+            margin-top: 10px;
+            font-size: 22px;
+        }
+    }
+    .city_name, .city_country{
+        font-size: 20px;
+    }
 }
